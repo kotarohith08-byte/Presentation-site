@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #050509;
+  --bg-card: rgba(10, 16, 32, 0.75);
+  --cyan-glow: #00f0ff;
+  --blue-electric: #38bdf8;
+  --purple-neon: #a855f7;
+  --violet-glow: #818cf8;
+  --gold-accent: #f59e0b;
+  --emerald-accent: #10b981;
+  --coral-accent: #f43f5e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-dark);
+  color: #f1f5f9;
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Futuristic Headings */
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-mono-code {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(10, 16, 30, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(56, 189, 248, 0.15);
+}
+
+.glass-panel:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8), 0 0 25px -3px rgba(56, 189, 248, 0.25);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(16, 24, 44, 0.82) 0%, rgba(8, 12, 24, 0.88) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(129, 140, 248, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.65);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(56, 189, 248, 0.55);
+  box-shadow: 0 14px 40px 0 rgba(0, 0, 0, 0.8), 0 0 20px 2px rgba(56, 189, 248, 0.2);
+}
+
+.glass-card-coral {
+  background: linear-gradient(135deg, rgba(35, 12, 24, 0.82) 0%, rgba(18, 8, 16, 0.88) 100%);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(244, 63, 94, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.65);
+}
+
+.glass-card-coral:hover {
+  border-color: rgba(244, 63, 94, 0.6);
+  box-shadow: 0 14px 40px 0 rgba(0, 0, 0, 0.8), 0 0 20px 2px rgba(244, 63, 94, 0.25);
+}
+
+.glass-pill {
+  background: rgba(14, 22, 40, 0.65);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+}
+
+.glass-pill-gold {
+  background: rgba(30, 24, 14, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.glass-pill-purple {
+  background: rgba(24, 14, 38, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+/* 3D Perspective Effects */
+.perspective-container {
+  perspective: 1200px;
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Neon Text Glow */
+.text-glow-cyan {
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.6), 0 0 24px rgba(0, 240, 255, 0.25);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.6), 0 0 24px rgba(168, 85, 247, 0.25);
+}
+
+.text-glow-gold {
+  text-shadow: 0 0 12px rgba(245, 158, 11, 0.6), 0 0 24px rgba(245, 158, 11, 0.25);
+}
+
+/* Metallic Gradients */
+.bg-gradient-silver {
+  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-cyan {
+  background: linear-gradient(135deg, #38bdf8 0%, #00f0ff 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(10, 16, 30, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
+}
+
+/* Pulse Keyframes */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.45);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Slide Transition Animations */
+.slide-in-right {
+  animation: slideRight 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.slide-in-left {
+  animation: slideLeft 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* Hologram scanline effect */
+.scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
